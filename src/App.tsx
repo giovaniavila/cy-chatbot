@@ -1,8 +1,12 @@
+import LoginPage from "./pages/login";
+import { FormProvider, useForm } from "react-hook-form";
+
 function App() {
+  const formMethods = useForm();
   return (
-    <>
-      <div className="bg-gray-500">teste</div>
-    </>
+    <FormProvider {...formMethods}>
+      <LoginPage />
+    </FormProvider>
   );
 }
 
